@@ -1,4 +1,6 @@
-module.exports = {
+var makePuzzle = require('./letter.js')
+
+exports.puzzObj = {
 	puzzles: [
 		{
 			word: "Cthulhu",
@@ -19,6 +21,4 @@ module.exports = {
 		return rand;
 	}
 }
-// this.game.selectPuzzle();
 
-// console.log(this.game.selectPuzzle())

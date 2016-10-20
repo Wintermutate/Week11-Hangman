@@ -1,20 +1,16 @@
-var game = require('./game.js');
-
-// console.log(game.selectPuzzle());
-
-function makeLetters(puzzle) {
-	var output = "";
-	var letters = [];
-	for(i=0; i<puzzle.word.length; i++){
-		// output += "_";
-		letters.push(puzzle.word[i].toLowerCase())
-
-		if (letters[i] == " ") {
-			output += " "
+exports.Letter = function(ltr) {
+	this.letter = ltr,
+	this.isVisible = false,
+	this.renderLetters = function(){
+		if (this.isVisible){
+			return this.letter;
+		}else if (this.letter === " "){
+			return " ";
+		}else{
+			return " _ ";
 		}
-		if (true) {}
-	}
-	return console.log(letters);
+	};
+	
 }
 
-makeLetters(game.selectPuzzle());
+
