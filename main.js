@@ -37,8 +37,11 @@ var game = {
 		this.guessesRemaining = 10;
 	},
 	checkGuess: function(){
+		guessFlag = false;
 		for (i=0; i<guessedLetters.length; i++){
-
+			if(answers.guess == guessedLetters[i]){
+				guessFlag = true;
+			}return console.log("You've already entered that letter!")
 		}
 	}
 
